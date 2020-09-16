@@ -1,0 +1,20 @@
+doctype html
+html
+    head
+        include header.pug
+        script(src='/scripts/auth.js')
+
+    body
+      div.container
+        div.row.pt-5.mt-5
+            div.col-12.border.border-primary.rounded.mx-2
+                div.row.my-5
+                    div.col-5.pl-5
+                        label(for="github_id") API Client ID  
+                    div.col-7
+                        input(id="github_id", type="text")
+                div.row
+                    a(class='button btn-primary w-100 py-5 text-center' href='#' id='auth_button') Authenticate
+      
+      
+      include footer.pug

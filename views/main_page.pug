@@ -1,0 +1,29 @@
+doctype html
+html
+   include header.pug
+
+   body
+      div.container
+      h1.w-100.text-center#big_text Gits Manager
+
+        div.row.mx-5
+          div.col-12.col-md-8.bg-primary
+            div.col-12
+              label(for="github_id") Github Id 
+              input(id="github_id", type="text")
+            div.col-12
+              label(for="github_secret") Github Secret 
+              input(id="github_secret", type="text")
+            div.col-12
+              label(for="github_filter") Github Filter 
+              input(id="github_filter", type="text")
+          div.col-12.col-md-4.bg-secondary
+            div.col-12
+              button.button.btn-primary#auth_user Authenticate User
+              button.button.btn-primary#load_all_gits Load All Gists
+              button.button.btn-primary#load_gits_filter Load Gists With Applied Filter
+        div.row
+      
+      
+      
+      include footer.pug

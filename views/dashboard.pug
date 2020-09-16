@@ -1,0 +1,62 @@
+doctype html
+html
+    head
+        include header.pug
+        script.
+            var code = !{JSON.stringify(code)}
+        script(src='/scripts/dashboard.js')
+
+    body
+        div.container
+            div.row.pt-5#connected_row
+                div.text-center.col-12 
+                    a.disabled.button.btn-success.py-3.px-2 Connected
+            div.row.pt-5#error_row
+                div.text-center.col-12 
+                    a.disabled.button.btn-danger.py-3.px-2 Error
+            div.row.pt-1.mt-5.border.border-rounded.border-success#connect_row
+                div.col-12
+                    div.form-group
+                        label(for="github_id") Github Id 
+                        input(id="github_id" class="form-control" type="text")
+                    div.form-group
+                        label(for="github_secret") Github Secret 
+                        input(id="github_secret" class="form-control" type="text")
+                    div.form-group
+                        button.button.btn-primary.w-100#connect_user Connect
+            div.row.px-2.py-3
+                div.col-12.col-md-4
+                    button.button.btn-secondary.w-100#load_gists Load Gists
+                div.col-12.col-md-4.offset-md-4
+                    button.button.btn-secondary.w-100#create_gist Create Gist
+            div.row
+                div.col-12.border.px-2.py-3
+                    a.btn.disabled.btn-warning.w-100 Gists List
+                    table.w-100#gists_table
+                        thead
+                            tr
+                                th Id
+                                th Description
+                                th Actions
+            div.row.px-2.py-3#gist_creation_form
+                div.col-12.border.px-2.py-3
+                    div.form-group
+                        label(for="gist_desc") Gist Description:
+                        input(id="gist_desc" class="form-control" type="text" oninput="gistDescriptionUpdated(this.value)")
+                div.col-12.col-md-8.px-2.py-3.border
+                    div.form-group
+                        label(for="file_name") File Name: 
+                        input(id="file_name" class="form-control" type="text")
+                    div.form-group
+                        label(for="file_contents") File Contents:
+                        input(id="file_contents" class="form-control" type="textfield")
+                    div.form-group
+                        button.button.btn-primary.w-100#save_file_to_gist Save File
+                div.col-12.col-md-4.border.px-2.py-3
+                    a.btn.disabled.btn-warning.w-100 File List
+                    table.w-100#files_table
+                        thead
+                            tr
+                                th Name
+                                th Actions
+    include footer.pug

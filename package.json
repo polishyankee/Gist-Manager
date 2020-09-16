@@ -1,0 +1,21 @@
+{
+  "name": "study_exercise",
+  "version": "1.0.0",
+  "description": "App used to manage Your gists",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kamil Stasica",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.2",
+    "bootstrap-toggle": "^2.2.2",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "pug": "^3.0.0"
+  }
+}
