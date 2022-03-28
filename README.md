@@ -1,3 +1,7 @@
+#Gist Manager 
+
+Apllication to manage gists in your repository. Build on Javascript(Express) and Pug.
+
 # SETUP INFO
 - '''npm init'''
 - '''npm install --save express'''
